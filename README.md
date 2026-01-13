@@ -19,7 +19,7 @@ We performed EDA to identify specific challenges in detecting small, irregular r
 
 Random sampling of the training data confirmed that defects like `Longitudinal Crack` (ID 0) and `Transverse Crack` (ID 1) are often only 2–3 pixels wide. Standard 640px resolution causes these features to collapse into noise.
 
-<img src="IIT_BOMBAY/combined_cracks.jpg" width="800 percent" height="250 percent">
+<img src="Images/combined_cracks.jpg" width="800 percent" height="250 percent">
 
 <p style="text-align: center;">
 <em><strong>Figure 1</strong>: Sample image showing all <strong>five road damage classes</strong> with ground-truth boxes.</em>
@@ -67,8 +67,8 @@ We compared the initial relay approach against the final continuous pipeline.
 
 <table class="no-border">
 <tr>
-<td><img src="IIT_BOMBAY/assets/Final_PR_Curve.png" width="545 percent" height="170 percent"></td>
-<td><img src="IIT_BOMBAY/Run_Continuous_Final\Final_Result\Normalized_Confusion_Matrix.png" width="545 percent" height="170 percent"></td>
+<td><img src="Images/Final_PR_Curve.png" width="545 percent" height="170 percent"></td>
+<td><img src="Images/Run_Continuous_Final_Normalized_Confusion_Matrix.png" width="545 percent" height="170 percent"></td>
 </tr>
 </table>
 
@@ -81,7 +81,7 @@ We compared the initial relay approach against the final continuous pipeline.
 * **Strategy:** Mosaic augmentation disabled at Epoch 24 to refine performance on realistic images.
 * **Result:** The model achieved **0.573 mAP@50** and **0.303 mAP@50–95**, delivering its strongest overall performance.
 
-<img src="IIT_BOMBAY/assets/results.png" width="430 percent" height="210 percent">
+<img src="Images/results.png" width="430 percent" height="210 percent">
 
 ***Figure 4**: Full **training history** (Epochs 1–36) showing stable convergence after the relay-to-continuous transition.*
 
@@ -143,8 +143,8 @@ We enabled TTA (`augment=True`), performing inference on flipped and scaled vari
 
 <table class="no-border">
 <tr>
-<td><img src="IIT_BOMBAY/assets/Set2_Batch_ACTUAL.jpg" width="545 percent" height="100 percent"></td>
-<td><img src="IIT_BOMBAY/assets/Set2_Batch_PREDICTED.jpg" width="545 percent" height="100 percent"></td>
+<td><img src="Images/Set2_Batch_ACTUAL.jpg" width="545 percent" height="100 percent"></td>
+<td><img src="Images/Set2_Batch_PREDICTED.jpg" width="545 percent" height="100 percent"></td>
 </tr>
 </table>
 
